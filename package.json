@@ -2,9 +2,10 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "start": "nuxt --dotenv .env.prod start",
+    "dev": "nuxt --dotenv .env.local dev",
+    "generate": "nuxt --dotenv .env.local generate",
+    "preview": "nuxt --dotenv .env.prod preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
