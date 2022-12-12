@@ -6,4 +6,8 @@ export default defineNuxtConfig({
       publicApiKey: '345',
     },
   },
+  nitro: {},
+  postcss: {},
+  vite: {},
+  webpack: {},
 })
