@@ -1,42 +1,19 @@
-# Nuxt 3 Minimal Starter
+# heewon's blog Admin
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 목적
 
-## Setup
+heewon-blog를 관리하기 위한 화면
 
-Make sure to install the dependencies:
+## 요건
 
-```bash
-# yarn
-yarn install
+- 글 생성, 삭제, 수정, 조회, 숨김, 비공개가 가능
+- 글 별로 조회수 추적 가능
+- 날짜 별로 총 조회수와 누적 조회수 추적 가능
+- 카테고리 생성, 삭제, 수정 가능
+- 글 작성은 md로 하고 실시간 변환이 이루어지며 그걸 볼 수 있게
+- pc만 대응
 
-# npm
-npm install
+## 기술
 
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Nuxt3
+- TailWindCSS
