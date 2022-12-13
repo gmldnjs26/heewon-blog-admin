@@ -6,6 +6,7 @@ export default defineNuxtConfig({
       publicApiKey: '345',
     },
   },
+  // 외부파일설정
   nitro: {},
   postcss: {},
   vite: {},

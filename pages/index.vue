@@ -1,10 +1,7 @@
 <template>
-  <div>Top</div>
+  <div>IndexPage</div>
 </template>
 
-<script setup lang="ts">
-const runtimeConfig = useRuntimeConfig()
-console.log(runtimeConfig)
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
