@@ -8,7 +8,13 @@ export default defineNuxtConfig({
   },
   // 외부파일설정
   nitro: {},
-  postcss: {},
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   vite: {},
   webpack: {},
 })
