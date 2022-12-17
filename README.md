@@ -17,3 +17,5 @@ heewon-blog를 관리하기 위한 화면
 
 - Nuxt3
 - TailWindCSS
+- [Nuxt Icon](https://github.com/nuxt-modules/icon)
+- [IconesJs](https://icones.js.org/)
