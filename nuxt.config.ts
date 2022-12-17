@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       publicApiKey: '345',
     },
   },
-  // 외부파일설정
+  modules: ['nuxt-icon'],
   nitro: {},
   css: ['~/assets/css/main.css'],
   postcss: {
