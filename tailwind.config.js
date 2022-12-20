@@ -20,8 +20,9 @@ module.exports = {
       colors: {
         bgc: '#f0f2f5',
         'gray-dark': '#273444',
-        gray: '#8492a6',
+        gray: '#d1d7e1',
         'gray-light': '#d3dce6',
+        'blue-dark': '#0284c7',
         primary: {
           color: '#014f77',
           bg: '#c0e0f1',
