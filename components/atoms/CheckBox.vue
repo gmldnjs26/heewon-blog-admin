@@ -1,14 +1,15 @@
 <template>
-  <label class="flex items-center" :class="checked ? 'font-bold' : ''">
+  <label class="inline-flex items-center" :class="{ 'opacity-50': disabled }">
     <input
       :id="id"
-      class="inline-flex items-center justify-center mr-1 w-4 h-4 rounded border border-solid appearance-none"
+      class="inline-flex items-center justify-center mr-1 w-4 h-4 rounded border border-solid appearance-none transition-all"
       :class="styles"
       type="checkbox"
       :checked="checked"
+      :disabled="disabled"
       @change="onChange"
     />
-    {{ text }}
+    <span :class="checked ? 'font-bold' : ''">{{ text }}</span>
   </label>
 </template>
 
@@ -33,7 +34,7 @@ const emit = defineEmits(['change'])
 
 const styles = computed(() => {
   if (props.checked) {
-    return 'border-blue-dark bg-blue-dark before:inline-block before:relative before:mb-1 before:w-[10px] before:h-[4.5px] before:border-white before:border-b-2 before:border-l-2 before:-rotate-45'
+    return 'border-blue-dark bg-blue-dark before:absolute before:mb-1 before:w-[10px] before:h-[4.5px] before:border-white before:border-b-2 before:border-l-2 before:-rotate-45'
   } else {
     return 'border-gray'
   }
