@@ -1,6 +1,6 @@
 <template>
   <input
-    class="inline-flex items-center w-10 h-6 rounded-full border appearance-none transition-all duration-250"
+    class="inline-flex items-center w-10 h-6 rounded-full border appearance-none transition before:transition"
     :class="styles"
     :checked="checked"
     :disabled="disabled"
@@ -28,11 +28,20 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits(['change'])
 
 const styles = computed(() => {
+  const classes = []
   if (props.checked) {
-    return 'bg-blue-dark border-blue-dark before:inline-block before:w-[16px] before:h-[16px] before:rounded-full before:bg-white before:ml-5'
+    classes.push(
+      'bg-blue-dark border-blue-dark before:inline-block before:w-[16px] before:h-[16px] before:rounded-full before:bg-white before:translate-x-5'
+    )
   } else {
-    return 'border-gray before:inline-block before:w-[16px] before:h-[16px] before:rounded-full before:bg-gray before:ml-1'
+    classes.push(
+      'border-gray before:inline-block before:w-[16px] before:h-[16px] before:rounded-full before:bg-gray before:translate-x-1'
+    )
   }
+  if (props.disabled) {
+    classes.push('opacity-0.6')
+  }
+  return classes.join(' ')
 })
 
 const onChange = (e: Event & { target: HTMLInputElement }) => {
