@@ -4,6 +4,7 @@
     :type="type"
     :placeholder="placeholder"
     :disabled="disabled"
+    :readonly="readonly"
     @input="onInput"
     @blur="onBlur"
   />
@@ -15,6 +16,7 @@ interface Props {
   placeholder: string
   error: boolean
   disabled: boolean
+  readonly: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -22,6 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   placeholder: '',
   error: false,
   disabled: false,
+  readonly: false,
 })
 
 const emit = defineEmits(['input', 'blur'])
