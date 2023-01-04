@@ -7,7 +7,7 @@
     @click="onClick"
   >
     <Icon class="mr-1" v-if="icon" :name="icon" size="24" />
-    {{ text }}
+    <template v-if="text">{{ text }}</template>
   </button>
 </template>
 
@@ -41,7 +41,6 @@ const onClick = () => {
 const styles = computed<string>(() => {
   const classes = []
   // button color styles
-  console.log(props.type)
   switch (props.type) {
     case 'primary': {
       classes.push(
