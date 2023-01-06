@@ -1,39 +1,43 @@
 <template>
   <button
-    class="border px-3 py-[6px] rounded-[3px] transition duration-250 ease-in-out flex items-center justify-center"
+    type="button"
+    tabindex="1"
+    class="border py-[6px] rounded-[3px] transition duration-250 ease-in-out flex items-center justify-center"
     :style="`width: ${width}`"
     :class="styles"
     :disabled="disabled"
     @click="onClick"
+    @blur="onBlur"
   >
-    <Icon class="mr-1" v-if="icon" :name="icon" size="24" />
-    <template v-if="text">{{ text }}</template>
+    <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  text: string
   type?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'
   size?: 'small' | 'medium' | 'large'
+  px?: string
   width?: string
-  icon?: string
   disabled?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  text: '',
   type: 'primary',
   size: 'medium',
+  px: 'px-3',
   width: '',
-  icon: '',
   disabled: false,
 })
 
-const emit = defineEmits(['click'])
+const emit = defineEmits(['click', 'blur'])
 
 const onClick = () => {
   emit('click')
+}
+
+const onBlur = () => {
+  emit('blur')
 }
 
 // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
@@ -103,6 +107,10 @@ const styles = computed<string>(() => {
       classes.push('text-large')
     }
   }
+
+  // etc styles
+  classes.push(props.px)
+
   return classes.join(' ')
 })
 </script>
