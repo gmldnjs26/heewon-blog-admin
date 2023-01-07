@@ -9,7 +9,6 @@
     @click="onChange"
     @keydown.space.prevent="onChange"
   />
-  asdasd
 </template>
 
 <script setup lang="ts">
@@ -35,7 +34,7 @@ const styles = computed(() => {
     )
   } else {
     classes.push(
-      'border-gray before:inline-block before:w-[16px] before:h-[16px] before:rounded-full before:bg-gray before:translate-x-1'
+      'border-gray-normal before:inline-block before:w-[16px] before:h-[16px] before:rounded-full before:bg-gray-normal before:translate-x-1'
     )
   }
   if (props.disabled) {

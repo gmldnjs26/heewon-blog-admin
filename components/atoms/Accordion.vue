@@ -1,10 +1,5 @@
 <template>
-  <Transition
-    @before-enter="beforeEnter"
-    @before-leave="beforeLeave"
-    @enter="enter"
-    @leave="leave"
-  >
+  <Transition @before-enter="beforeEnter" @before-leave="beforeLeave" @enter="enter" @leave="leave">
     <div v-show="isOpen">
       <slot></slot>
     </div>
@@ -12,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { useTransition } from '~~/composables/useTransition'
+import { useTransition } from '~/composables/useTransition'
 
 interface Props {
   isOpen: boolean

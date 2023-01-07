@@ -1,6 +1,6 @@
 <template>
   <input
-    class="rounded-md border border-gray placeholder-black text-black px-3 py-2 focus:ring-1 focus:outline-none leading-none"
+    class="rounded-md border border-gray-normal placeholder-black text-black px-3 py-2 focus:ring-1 focus:outline-none leading-none"
     :type="type"
     :placeholder="placeholder"
     :disabled="disabled"

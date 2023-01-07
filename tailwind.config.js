@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         bgc: '#f0f2f5',
         'gray-dark': '#273444',
-        gray: '#d1d7e1',
+        'gray-normal': '#d1d7e1',
         'gray-light': '#d3dce6',
         'blue-dark': '#0284c7',
         black: '#3e444a',

@@ -36,7 +36,7 @@ const styles = computed(() => {
   if (props.checked) {
     return 'border-blue-dark bg-blue-dark before:absolute before:mb-1 before:w-[10px] before:h-[4.5px] before:border-white before:border-b-2 before:border-l-2 before:-rotate-45'
   } else {
-    return 'border-gray'
+    return 'border-gray-normal'
   }
 })
 
