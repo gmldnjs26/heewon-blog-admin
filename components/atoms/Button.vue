@@ -1,18 +1,3 @@
-<template>
-  <button
-    type="button"
-    tabindex="1"
-    class="border py-[6px] rounded-[3px] transition duration-250 ease-in-out flex items-center justify-center"
-    :style="`width: ${width}`"
-    :class="styles"
-    :disabled="disabled"
-    @click="onClick"
-    @blur="onBlur"
-  >
-    <slot></slot>
-  </button>
-</template>
-
 <script setup lang="ts">
 interface Props {
   type?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger'
@@ -99,12 +84,15 @@ const styles = computed<string>(() => {
   switch (props.size) {
     case 'small': {
       classes.push('text-sm')
+      break
     }
     case 'medium': {
       classes.push('text-base')
+      break
     }
     case 'large': {
       classes.push('text-large')
+      break
     }
   }
 
@@ -114,3 +102,18 @@ const styles = computed<string>(() => {
   return classes.join(' ')
 })
 </script>
+
+<template>
+  <button
+    type="button"
+    tabindex="1"
+    class="border py-[6px] rounded-[3px] transition duration-250 ease-in-out flex items-center justify-center"
+    :style="`width: ${width}`"
+    :class="styles"
+    :disabled="disabled"
+    @click="onClick"
+    @blur="onBlur"
+  >
+    <slot></slot>
+  </button>
+</template>

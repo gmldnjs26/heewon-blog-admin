@@ -1,18 +1,3 @@
-<template>
-  <label class="inline-flex items-center" :class="{ 'opacity-50': disabled }">
-    <input
-      :id="id"
-      class="inline-flex items-center justify-center mr-1 w-4 h-4 rounded border border-solid appearance-none transition-all"
-      :class="styles"
-      type="checkbox"
-      :checked="checked"
-      :disabled="disabled"
-      @change="onChange"
-    />
-    <span :class="checked ? 'font-bold' : ''">{{ text }}</span>
-  </label>
-</template>
-
 <script setup lang="ts">
 interface Props {
   id: string
@@ -44,3 +29,18 @@ const onChange = (e: Event & { target: HTMLInputElement }) => {
   emit('change', e.target.checked)
 }
 </script>
+
+<template>
+  <label class="inline-flex items-center" :class="{ 'opacity-50': disabled }">
+    <input
+      :id="id"
+      class="inline-flex items-center justify-center mr-1 w-4 h-4 rounded border border-solid appearance-none transition-all"
+      :class="styles"
+      type="checkbox"
+      :checked="checked"
+      :disabled="disabled"
+      @change="onChange"
+    />
+    <span :class="checked ? 'font-bold' : ''">{{ text }}</span>
+  </label>
+</template>

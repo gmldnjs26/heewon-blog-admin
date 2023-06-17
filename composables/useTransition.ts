@@ -47,8 +47,7 @@ export const useTransition = () => {
     el.style.transition = 'background-color 0.5s ease'
     if (el.firstChild instanceof HTMLElement) {
       el.firstChild.style.transform = 'translateX(563px)'
-      el.firstChild.style.transition =
-        'transform 0.5s cubic-bezier(0, 0, 0.2, 1) 0ms'
+      el.firstChild.style.transition = 'transform 0.5s cubic-bezier(0, 0, 0.2, 1) 0ms'
     }
   }
   const rightSideEnter = (el: HTMLElement) => {
@@ -71,8 +70,7 @@ export const useTransition = () => {
       el.style.transition = 'background-color 0.5s ease'
       if (el.firstChild instanceof HTMLElement) {
         el.firstChild.style.transform = 'translateX(563px)'
-        el.firstChild.style.transition =
-          'transform 0.5s cubic-bezier(0, 0, 0.2, 1) 0ms'
+        el.firstChild.style.transition = 'transform 0.5s cubic-bezier(0, 0, 0.2, 1) 0ms'
       }
     })
   }

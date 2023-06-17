@@ -1,16 +1,3 @@
-<template>
-  <input
-    class="inline-flex items-center w-10 h-6 rounded-full border appearance-none transition before:transition"
-    :class="styles"
-    :checked="checked"
-    :disabled="disabled"
-    type="checkbox"
-    tabindex="0"
-    @click="onChange"
-    @keydown.space.prevent="onChange"
-  />
-</template>
-
 <script setup lang="ts">
 interface Props {
   text?: string
@@ -47,3 +34,16 @@ const onChange = (e: Event & { target: HTMLInputElement }) => {
   emit('change', e.target.checked)
 }
 </script>
+
+<template>
+  <input
+    class="inline-flex items-center w-10 h-6 rounded-full border appearance-none transition before:transition"
+    :class="styles"
+    :checked="checked"
+    :disabled="disabled"
+    type="checkbox"
+    tabindex="0"
+    @click="onChange"
+    @keydown.space.prevent="onChange"
+  />
+</template>
