@@ -50,14 +50,14 @@ const styles = computed(() => {
 <template>
   <div class="relative" @blur="blurHandler">
     <AtomsButton px="px-1" :type="type" :disabled="disabled" @click="clickHandler" @blur="blurHandler">
-      <span class="font-semibold ml-[6px]">{{ text }}</span>
+      <span class="ml-[6px] font-semibold">{{ text }}</span>
       <Icon name="FullArrowDown" size="18" />
     </AtomsButton>
-    <ul v-show="isOpen" class="absolute bg-white shadow-md min-w-[192px] rounded-sm p-2 z-10" :class="styles">
+    <ul v-show="isOpen" class="absolute z-10 min-w-[192px] rounded-sm bg-white p-2 shadow-md" :class="styles">
       <li
         v-for="(item, idx) in items"
         :key="idx"
-        class="px-3 py-2 text-sm cursor-pointer text-black hover:bg-gray-100 rounded-md"
+        class="cursor-pointer rounded-md px-3 py-2 text-sm text-black hover:bg-gray-100"
         @click="onSelect(item.id)"
       >
         item.value

@@ -40,7 +40,7 @@ const inputHandler = (value: string | number) => {
     IndexPage
     <input type="checkbox" />
     <label>asdasd</label>
-    <AtomsButton width="150px" @click="clickHandler">Button</AtomsButton>
+    <AtomsButton width="150px" @click="clickHandler"> Button </AtomsButton>
     <AtomsButton type="secondary" @click="clickHandler">
       <Icon class="mr-1" name="LoginIcon" size="24" />Button
     </AtomsButton>
@@ -48,7 +48,7 @@ const inputHandler = (value: string | number) => {
     <AtomsButton type="warning" @click="clickHandler"> Button </AtomsButton>
     <AtomsButton type="success" @click="clickHandler"> Button </AtomsButton>
     <AtomsButton type="danger" width="150px" @click="clickHandler"> Button </AtomsButton>
-    <div class="text-xl w-10 cursor-pointer" @click="toggleAccordion">Accordion Title</div>
+    <div class="w-10 cursor-pointer text-xl" @click="toggleAccordion">Accordion Title</div>
     <AtomsAccordion :is-open="isOpen">
       <div class="h-5">asdasd</div>
       <div class="h-5">asdasd</div>

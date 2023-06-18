@@ -34,7 +34,7 @@ const onChange = (e: Event & { target: HTMLInputElement }) => {
   <label class="inline-flex items-center" :class="{ 'opacity-50': disabled }">
     <input
       :id="id"
-      class="inline-flex items-center justify-center mr-1 w-4 h-4 rounded border border-solid appearance-none transition-all"
+      class="mr-1 inline-flex h-4 w-4 appearance-none items-center justify-center rounded border border-solid transition-all"
       :class="styles"
       type="checkbox"
       :checked="checked"

@@ -107,7 +107,7 @@ const styles = computed<string>(() => {
   <button
     type="button"
     tabindex="1"
-    class="border py-[6px] rounded-[3px] transition duration-250 ease-in-out flex items-center justify-center"
+    class="duration-250 flex items-center justify-center rounded-[3px] border py-[6px] transition ease-in-out"
     :style="`width: ${width}`"
     :class="styles"
     :disabled="disabled"

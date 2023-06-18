@@ -2,7 +2,7 @@
 import { useTransition } from '~/composables/useTransition'
 
 interface Props {
-  isOpen: boolean
+  isOpen?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {

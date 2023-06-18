@@ -29,7 +29,7 @@ const onBlur = (e: Event & { target: HTMLInputElement }) => {
 
 <template>
   <input
-    class="rounded-md border border-gray-normal placeholder-black text-black px-3 py-2 focus:ring-1 focus:outline-none leading-none"
+    class="border-gray-normal rounded-md border px-3 py-2 leading-none text-black placeholder:text-black focus:outline-none focus:ring-1"
     :value="value"
     :type="type"
     :placeholder="placeholder"

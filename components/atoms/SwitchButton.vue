@@ -37,7 +37,7 @@ const onChange = (e: Event & { target: HTMLInputElement }) => {
 
 <template>
   <input
-    class="inline-flex items-center w-10 h-6 rounded-full border appearance-none transition before:transition"
+    class="inline-flex h-6 w-10 appearance-none items-center rounded-full border transition before:transition"
     :class="styles"
     :checked="checked"
     :disabled="disabled"

@@ -1,5 +1,5 @@
 <template>
-  <nav class="shadow w-[250px] bg-white">
+  <nav class="w-[250px] bg-white shadow">
     <h2 class="text-lg">heewon</h2>
   </nav>
 </template>

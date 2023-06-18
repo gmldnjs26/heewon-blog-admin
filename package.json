@@ -1,6 +1,11 @@
 {
   "private": true,
   "scripts": {
+    "lint": "run-s lint:eslint:fix lint:prettier:fix",
+    "lint:prettier": "prettier --check \"./**/*.(ts|vue|css|scss|md)\"",
+    "lint:prettier:fix": "prettier --write \"./**/*.(ts|vue|css|scss|md)\"",
+    "lint:eslint": "eslint -c .eslintrc.cjs --ext .vue,.ts .",
+    "lint:eslint:fix": "eslint -c .eslintrc.cjs --fix  --ext .vue,.ts .",
     "build": "nuxt build",
     "start": "nuxt --dotenv .env.prod start",
     "dev": "nuxt --dotenv .env.local dev",
@@ -14,7 +19,9 @@
     "autoprefixer": "^10.4.13",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier-vue": "^4.2.0",
+    "eslint-plugin-tailwindcss": "^3.12.1",
+    "npm-run-all": "^4.1.5",
     "nuxt": "^3.5.3",
     "nuxt-icon": "^0.1.8",
     "postcss": "^8.4.20",
