@@ -1,22 +1,22 @@
 // Enter, LeaveにsetTimeoutをしたのはモダールによって既にレンダリングされている場合がある。
 // それでbeforeEnterよりEnterが先にトリガーされちゃうのでsetTimeoutでcallback化する
 export const useTransition = () => {
-  const accordionBeforeEnter = (el: HTMLElement) => {
+  const accordionBeforeEnter = <T extends HTMLElement>(el: T) => {
     el.style.height = '0'
     el.style.opacity = '0'
     el.style.transition = 'all 0.2s'
   }
-  const accordionEnter = (el: HTMLElement) => {
+  const accordionEnter = <T extends HTMLElement>(el: T) => {
     setTimeout(() => {
       el.style.height = el.scrollHeight + 'px'
       el.style.opacity = '1'
     })
   }
-  const accordionBeforeLeave = (el: HTMLElement) => {
+  const accordionBeforeLeave = <T extends HTMLElement>(el: T) => {
     el.style.height = el.scrollHeight + 'px'
     el.style.opacity = '1'
   }
-  const accordionLeave = (el: HTMLElement) => {
+  const accordionLeave = <T extends HTMLElement>(el: T) => {
     setTimeout(() => {
       el.style.height = '0'
       el.style.opacity = '0'

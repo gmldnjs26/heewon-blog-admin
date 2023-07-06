@@ -5,6 +5,8 @@ interface Props {
   isOpen?: boolean
 }
 
+type Tag = HTMLDivElement
+
 const props = withDefaults(defineProps<Props>(), {
   isOpen: false,
 })
@@ -18,7 +20,7 @@ const {
 </script>
 
 <template>
-  <Transition @before-enter="beforeEnter" @before-leave="beforeLeave" @enter="enter" @leave="leave">
+  <Transition @before-enter="beforeEnter<Tag>" @before-leave="beforeLeave<Tag>" @enter="enter<Tag>" @leave="leave<Tag>">
     <div v-show="isOpen">
       <slot></slot>
     </div>

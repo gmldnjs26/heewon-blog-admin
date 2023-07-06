@@ -15,14 +15,12 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
 })
 
-const emit = defineEmits(['click', 'blur'])
+const emits = defineEmits<{
+  (e: 'click', value: MouseEvent): void
+}>()
 
-const onClick = () => {
-  emit('click')
-}
-
-const onBlur = () => {
-  emit('blur')
+const onClick = (e: MouseEvent) => {
+  emits('click', e)
 }
 
 // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
@@ -83,15 +81,15 @@ const styles = computed<string>(() => {
   // button size styles
   switch (props.size) {
     case 'small': {
-      classes.push('text-sm')
+      classes.push('h-[36px]')
       break
     }
     case 'medium': {
-      classes.push('text-base')
+      classes.push('h-[44px]')
       break
     }
     case 'large': {
-      classes.push('text-large')
+      classes.push('h-[52px]')
       break
     }
   }
@@ -107,12 +105,11 @@ const styles = computed<string>(() => {
   <button
     type="button"
     tabindex="1"
-    class="duration-250 flex items-center justify-center rounded-[3px] border py-[6px] transition ease-in-out"
+    class="duration-250 flex items-center justify-center rounded-[3px] border transition ease-in-out"
     :style="`width: ${width}`"
     :class="styles"
     :disabled="disabled"
     @click="onClick"
-    @blur="onBlur"
   >
     <slot></slot>
   </button>
