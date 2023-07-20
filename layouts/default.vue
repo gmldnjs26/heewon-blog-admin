@@ -1,12 +1,10 @@
 <template>
   <div class="bg-bgc flex min-h-screen w-screen">
-    <OrganismsSidebar />
+    <Sidebar />
     <div class="mx-auto w-[1280px]">
-      <OrganismsHeader />
+      <Header />
       <NuxtPage />
-      <OrganismsFooter />
+      <Footer />
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
